@@ -1,7 +1,14 @@
 using AutoMapper;
-using WebApi.BookOperations.GetBooks;
-using static WebApi.BookOperations.CreateBook.CreateBookCommand;
-using static WebApi.BookOperations.GetBookDetail.GetBookDetailQuery;
+using WebApi.Application.BookOperations.Queries.GetBooks;
+using WebApi.Applications.AuthorOperations.Commands.CreateAuthor;
+using WebApi.Applications.AuthorOperations.Commands.UpdateAuthor;
+using WebApi.Applications.AuthorOperations.Queries.GetAuthorDetail;
+using WebApi.Applications.AuthorOperations.Queries.GetAuthors;
+using WebApi.Applications.GenreOperations.Queries.GetGenreDetail;
+using WebApi.Applications.GenreOperations.Queries.GetGenres;
+using WebApi.Entities;
+using static WebApi.Application.BookOperations.Commands.CreateBook.CreateBookCommand;
+using static WebApi.Application.BookOperations.Queries.GetBookDetail.GetBookDetailQuery;
 
 namespace WebApi.Common{
     public class MappingProfile : Profile
@@ -9,8 +16,16 @@ namespace WebApi.Common{
         public MappingProfile()
         {
             CreateMap<CreateBookModel, Book>();
-            CreateMap<Book, BookDetailViewModel>().ForMember(dest => dest.Genre, opt => opt.MapFrom(src => ((GenreEnum)src.GenreId).ToString()));
-            CreateMap<Book, BooksViewModel>().ForMember(dest => dest.Genre, opt => opt.MapFrom(src => ((GenreEnum)src.GenreId).ToString()));
+            CreateMap<Book, BookDetailViewModel>().ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));
+            CreateMap<Book, BooksViewModel>().ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.Name));
+
+            CreateMap<Genre, GenresViewModel>();
+            CreateMap<Genre, GenreDetailViewModel>();
+
+            CreateMap<Author, AuthorsViewModel>();
+            CreateMap<Author, AuthorDetailViewModel>();
+            CreateMap<CreateAuthorViewModel, Author>();
+            CreateMap<UpdateAuthorViewModel, Author>();
         }
     }
 }
