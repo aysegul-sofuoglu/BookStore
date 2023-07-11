@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aysegul\\Desktop\\Dotnet\\BookStore\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aysegul\\Desktop\\Dotnet\\BookStore\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aysegul\\Desktop\\Dotnet\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\aysegul\\Desktop\\Dotnet\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\aysegul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aysegul\\Desktop\\Dotnet\\BookStore\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,30 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.6.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0-preview.5.23280.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.0-preview.5.23280.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
