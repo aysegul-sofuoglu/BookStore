@@ -29,7 +29,7 @@ namespace WebApi.Common{
             CreateMap<Author, AuthorsViewModel>();
             CreateMap<Author, AuthorDetailViewModel>();
             CreateMap<CreateAuthorViewModel, Author>();
-            CreateMap<UpdateAuthorViewModel, Author>();
+         
         }
     }
 }

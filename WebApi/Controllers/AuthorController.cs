@@ -14,10 +14,10 @@ namespace WebApi.Controllers{
 
     public class AuthorController: ControllerBase{
 
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public AuthorController(BookStoreDbContext context, IMapper mapper)
+        public AuthorController(IBookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -61,9 +61,9 @@ namespace WebApi.Controllers{
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateAuthor(int id, [FromBody] UpdateAuthorViewModel updatedAuthor)
+        public IActionResult UpdateAuthor(int id, [FromBody] UpdateAuthorModel updatedAuthor)
         {
-            UpdateAuthorCommand command = new UpdateAuthorCommand(_mapper, _context);
+            UpdateAuthorCommand command = new UpdateAuthorCommand( _context);
             
             command.AuthorId = id;
             command.Model = updatedAuthor;

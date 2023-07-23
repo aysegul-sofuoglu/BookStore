@@ -1,17 +1,17 @@
-using AutoMapper;
+
 using WebApi.DBOperations;
 
 namespace WebApi.Applications.AuthorOperations.Commands.UpdateAuthor{
     public class UpdateAuthorCommand
     {
         public int AuthorId { get; set; }
-        public UpdateAuthorViewModel  Model { get; set; } 
-        private readonly BookStoreDbContext _dbContext;
-        private readonly IMapper _mapper;
+        public UpdateAuthorModel  Model { get; set; } 
+        private readonly IBookStoreDbContext _dbContext;
+     
 
-        public UpdateAuthorCommand(IMapper mapper, BookStoreDbContext dbContext)
+        public UpdateAuthorCommand(IBookStoreDbContext dbContext)
         {
-            _mapper = mapper;
+           
             _dbContext = dbContext;
         }
 
@@ -24,12 +24,15 @@ namespace WebApi.Applications.AuthorOperations.Commands.UpdateAuthor{
 		
 	
         
-		_mapper.Map(Model, author);
+		
+        author.Name = Model.Name != default ? Model.Name : author.Name;
+        author.Surname = Model.Surname != default ? Model.Surname : author.Surname;
+        
 		_dbContext.SaveChanges();
 	}
     }
 
-    public class UpdateAuthorViewModel 
+    public class UpdateAuthorModel 
 	{
 		public string Name { get; set; }
 		public string Surname { get; set; }

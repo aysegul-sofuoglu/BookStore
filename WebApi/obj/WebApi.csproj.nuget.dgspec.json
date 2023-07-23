@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj": {}
+    "c:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj": {
+    "c:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "c:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "c:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\aysegul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\obj\\",
+        "outputPath": "c:\\Users\\aysegul\\Desktop\\GitHub\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
